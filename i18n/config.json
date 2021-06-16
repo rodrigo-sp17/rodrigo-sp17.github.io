@@ -1,0 +1,17 @@
+[
+  {
+    "code": "en",
+    "hrefLang": "en-US",
+    "name": "English",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "pt",
+    "hrefLang": "pt-BR",
+    "name": "Brazilian Portuguese",
+    "localName": "Português",
+    "langDir": "ltr",
+    "dateFormat": "DD/MM/YYYY"
+  }
+ ]
