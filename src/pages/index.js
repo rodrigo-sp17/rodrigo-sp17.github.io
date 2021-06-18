@@ -7,6 +7,7 @@ import Skills from 'src/components/Skills'
 import Projects from 'src/components/Projects'
 import { Container, Row, Col, Image, Jumbotron } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Contact from "../components/Contact"
 
 // styles
 const pageStyles = {
@@ -87,13 +88,14 @@ const badgeStyle = {
 const IndexPage = () => {
   const { t } = useLocalization();
   return (
-    <>
+    <Container fluid>
       <Header />
       <Me />
       <About />
       <Skills />
       <Projects />
-    </>
+      <Contact />
+    </Container>
   );
 }
 

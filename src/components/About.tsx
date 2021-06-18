@@ -1,26 +1,34 @@
 import React from 'react';
-import { Container, Jumbotron } from "react-bootstrap";
+import { Container, Image, Col, Row } from "react-bootstrap";
+import profile from "../images/Perfil.jpg";
 
-const sectionStyles = {
-  paddingTop: 100,
-  height: '100vh',
-  backgroundColor: "#008ECC",
-}
 
 export default function About() {
   return (
-    <Jumbotron style={sectionStyles}>
-      <Container>
-      <h1>About Me</h1>
-        <p>
-          I'm a 28 year old self-taught programmer that used to operate big ships, but realized that I'm more interested in building software for
-          the ship than piloting her.
-        </p>
-        <p>
-          Since then, I've been dedicating my full time (and internet connection) to build software and learning the fundamentals, as the pain of facing
-          your own bad code further down the road is a great teacher of good practices!
-        </p>
+    <section className="bg-dark">
+      <Container className="pt-5 pb-5">
+        <Row>
+          <h1 className="display-3 text-white">About Me</h1>
+        </Row>
+        <Row className="justify-content-center pt-4">
+          <Col xs={12} lg={8}>
+            <p className="fs-5 pb-3 text-white">
+              I'm a 28 year old self-taught developer that used to operate <a href="https://en.wikipedia.org/wiki/Platform_supply_vessel" target="_blank">big ships</a>, 
+              but realized that I'm more fascinated by the <a href="https://en.wikipedia.org/wiki/Dynamic_positioning" target="_blank">software controlling the ship</a> 
+              than actually running her.
+            </p>
+            <p className="fs-5 text-white">
+              Since then, I've been dedicating my full time (and internet connection) to learning the fundamentals and building software that would help myself, 
+              former buddies and the people I love.
+            </p>
+            <p className="fs-5 text-white">
+              These projects have also taught me the importance of using well-chosen design patterns and writing good, clean code that is safe from bugs,
+              easy to change and highly modular.
+            </p>
+          </Col>
+          <Col xs={10} lg={4}><Image fluid thumbnail src={profile}  /></Col>
+        </Row>
       </Container>
-    </Jumbotron>
+    </section>
   )
 }

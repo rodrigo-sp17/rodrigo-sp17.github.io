@@ -1,36 +1,31 @@
 import React from 'react';
-import { Col, Container, Jumbotron, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
+
+const element = <FontAwesomeIcon icon={faAngleRight} />
 
 const sectionStyles = {
-  paddingTop: 100,
-  height: '100vh'
-}
-
-const skillStyles = {
-  margin: "auto",
+  minHeight: '40vh'
 }
 
 export default function Skills() {
   return (
-    <Jumbotron style={sectionStyles}>
-      <Container className="d-flex flex-column"   >
-        <h1>Skills</h1>
-        <Row className="d-flex pt-3">
-          <Col lg={true}><h6>- Java</h6></Col>
-          <Col lg={true}><h6>- React</h6></Col>
-          <Col lg={true}><h6>- Flutter</h6></Col>
-        </Row>
-        <Row className="pt-3">
-          <Col lg={true}><h6>- Spring Boot</h6></Col>
-          <Col lg={true}><h6>- Typescript</h6></Col>
-          <Col lg={true}><h6>- SQL and NoSQL</h6></Col>
-        </Row>
-        <Row className="pt-3">
-          <Col lg={true}><h6>- REST</h6></Col>
-          <Col lg={true}><h6>- Automated Testing</h6></Col>
-          <Col lg={true}><h6>- CI/CD</h6></Col>
+    <section style={sectionStyles}>
+      <Container className="pt-5 pb-5 vh-75">
+        <h1 className="display-3">Skills</h1>
+        <Row className="mt-4 pt-4">
+          <Col xs={12} lg={4}><h5>{element} Java</h5></Col>
+          <Col xs={12} lg={4}><h5>{element} React</h5></Col>
+          <Col xs={12} lg={4}><h5>{element} Flutter</h5></Col>
+          <Col xs={12} lg={4}><h5>{element} Spring Boot</h5></Col>
+          <Col xs={12} lg={4}><h5>{element} Typescript</h5></Col>
+          <Col xs={12} lg={4}><h5>{element} SQL and NoSQL</h5></Col>
+          <Col xs={12} lg={4}><h5>{element} REST</h5></Col>
+          <Col xs={12} lg={4}><h5>{element} Automated Testing</h5></Col>
+          <Col xs={12} lg={4}><h5>{element} CI/CD</h5></Col>
         </Row>
       </Container>
-    </Jumbotron>
+    </section>
   )
 }

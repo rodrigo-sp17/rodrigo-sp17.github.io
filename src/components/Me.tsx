@@ -1,14 +1,16 @@
 import React from "react";
-import { Container, Row, Col, Image, Jumbotron, Button } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 
 const sectionStyles = {
   //paddingLeft: 400,
-  height: '100vh'
+  height: '100vh',
 }
 
-const headingStyles = {
+const containerStyles = {
   //paddingTop: 200,
   //marginBottom: 64,
+  height: '100vh',
+  
 }
 
 const titleStyles = {
@@ -19,16 +21,22 @@ const titleStyles = {
 
 export default function Me() {
   return (
-    <Jumbotron style={sectionStyles} className="pt-xl-5 ">
-      <Container>
+    <section style={sectionStyles} className="pt-xl-5 ">
+      <Container className="d-flex flex-column justify-content-center h-100 ">
         <Row>
-          <h1 className="display-3">Hi, I'm <span className="fw-bold">Rodrigo.</span></h1>
-          <h1>Full-stack developer,</h1>
-          <h2>Self learner,</h2>
-          <h3>And a bit obssessed about building stuff...</h3>
+          <Col >
+            <h1 className="display-4">Hi, I'm <span className="fw-bold">Rodrigo.</span></h1>
+            <h1>Full-stack developer,</h1>
+            <h2>Self learner,</h2>
+            <h3>And a bit obssessed about building stuff...</h3>
+          </Col>
         </Row>
-        <Button className="mt-5">What do you mean?</Button>
+        <Row>
+          <Col>
+            <Button className="mt-5">Check it out!</Button>
+          </Col>
+        </Row>
       </Container>
-    </Jumbotron>
+    </section>
   );
 }
