@@ -5,6 +5,7 @@ import Header from 'src/components/Header'
 import About from 'src/components/About'
 import Skills from 'src/components/Skills'
 import Projects from 'src/components/Projects'
+import Footer from 'src/components/Footer'
 import { Container, Row, Col, Image, Jumbotron } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Contact from "../components/Contact"
@@ -88,14 +89,16 @@ const badgeStyle = {
 const IndexPage = () => {
   const { t } = useLocalization();
   return (
-    <Container fluid>
-      <Header />
-      <Me />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-    </Container>
+    <main>
+      <Container fluid className="p-0">
+        <Me />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
+      </Container>
+    </main>
   );
 }
 

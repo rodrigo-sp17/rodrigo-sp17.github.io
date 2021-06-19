@@ -1,28 +1,36 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import MyButton from './small/MyButton';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import Pulse from 'react-reveal/Pulse';
+
+const element = <FontAwesomeIcon icon={faPaperPlane} />
 
 const sectionStyles = {
-  minHeight: "40vh",
+  height: "60vh",
 }
 
 export default function Contact() {
   return (
     <section style={sectionStyles}>
-      <Container fluid className="pt-5 pb-5">
-        <Row>
-          <Col className="pt-5 text-center">
-            <h1 className="text-center">
-              Why don't we build together?
-            </h1> 
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={12} className="pt-3 text-center">
-            <a href="mailto:rodrigosilvap93@gmail.com">
-              <strong><h5>rodrigosilvap93@gmail.com</h5></strong>
-            </a>
-          </Col>
-        </Row>
+      <Container className="d-flex flex-column justify-content-center h-100">
+        <Pulse delay={500} duration={3000}>
+          <Row className="justify-content-center">
+            <Col>
+              <h1 className="text-center">
+                Why don't we build<br /> something <u><strong>awesome</strong></u> together?
+            </h1>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12} className="text-center">
+              <MyButton variant="blue" to="mailto:rodrigosilvap93@gmail.com">
+                {element}{" Email me!"}
+              </MyButton>
+            </Col>
+          </Row>
+        </Pulse>
       </Container>
     </section>
   );
