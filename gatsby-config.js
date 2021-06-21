@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Rods Portfolio",
-    siteUrl: "localhost:8000"
+    siteUrl: "https://rodrigo-sp17.github.io/"
   },
   plugins: [
     'gatsby-plugin-root-import',
